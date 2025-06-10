@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'TankFont';
+  src: url('../fonts/army_rust/ARMYRUST.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'link';
+  src: url('../fonts/coalition/Coalition_v2..ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'txt';
+  src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*:root {
+  --black-armor : #1A1A1A;
+  --green-army : #3A4D3F;
+  --grey-steel : #5C5C5C;
+  --dark-khaki : #4B5320;
+  --red-rust : #8B2E2E;
+  --matte-sand : #A59F91;
+  --cream: #fdfdf8;
+  --smoked-metal : #2F2F2F;
+}*/
+
+:root {
+/* army */
+  --chrcoal-black: #0F0F0F;
+  --battle-olive: #4A5C32;
+  --ammo-brass: #D4AF37;
+  --tank-grey: #7A7F7D;
+  --infrared: #A31621;
+  --concrete-smoke: #2E2E2E;
+  --radar-green: #A3C653;
+/* space */
+  --stellar-black: #0B0C10;
+  --nebula-purple: #6C3D9E;
+  --ion-blue: #00BFFF;
+  --plasma-white: #DCE1E3;
+  --meteor-ash: #2A2C34;
+  --comet-red: #E94560;
+  --lunar-grey: #5B5E6D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--stellar-black);
+  line-height: 1.6;
+}
+
+
+h1, h2, h3 {
+  font-family: 'TankFont', sans-serif;
+  letter-spacing: 3px;
+  color: var(--plasma-white);
+}
+
+p{
+  font-family: 'txt', sans-serif;
+  color: var(--plasma-white);
+}
+
+header{
+  background-color: var(--nebula-purple);
+  color: var(--plasma-white);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header>img{
+  border-radius: 40px;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+header li a{
+  font-family: 'link', sans-serif;
+  letter-spacing: 1px;
+  color: var(--plasma-white);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease;
+}
+
+header li a:hover{
+  background-color: var(--ion-blue);
+  border-radius: 5px;
+}
+
+main{
+  padding: 2rem;
+
+}
+
+#presentation{
+  width: 50rem;
+}
+
+#presentation p{
+  background-color: var(--meteor-ash);
+  border: solid 2px var(--nebula-purple);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+#formation-cv{
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
