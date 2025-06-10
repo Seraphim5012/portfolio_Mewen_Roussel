@@ -21,34 +21,46 @@
             </nav>
         </header>
         <main>
-            <section id="presentation">
-                <h2>A propos de moi</h2>
-                <p>
-                    Salut, je m'appelle Mewen Roussel. Je suis étudiant en première année de BUT Informatique à l'IUT de Lannion. 
-                    J'avais déja quelques connaissances en informatique car grâce à la spécialité NSI suivie au lycée mais cette 
-                    première année m'a permis de découvrir plusieurs langages de programmation (comme Python, C ou Java), 
-                    de travailler sur des projets concrets en groupe, et de me familiariser avec des outils professionnels 
-                    comme Git, Docker ou Visual Studio Code.
-                </p>
-            </section>
-            <div id="formation-cv">
-
-                <section id="formation">
-                    <h2>Ma formation</h2>
-                    <ul id="lst-formations">
-                        <li>
-                            <h3>BUT Informatique</h3>
-                            <p class="date">Septembre 2024</p>
-                            <p class="lieu">IUT de Lannion</p>
-                        </li>
-                        <li>
-                            <h3>Bac Générale - Spécialité NSI / Mathématique</h3>
-                            <p class="date">Septembre 2021 - Juin 2024</p>
-                            <p class="lieu">Lycée La Fontaine des Eaux, Dinan</p>
-                        </li>
-                    </ul>
+            <div class="haut-page">
+                <div id="pres-forma">
+                    <section id="presentation">
+                        <h2>A propos de moi</h2>
+                        <p>
+                            Salut, je m'appelle Mewen Roussel. Je suis étudiant en première année de BUT Informatique à l'IUT de Lannion. 
+                            J'avais déja quelques connaissances en informatique car grâce à la spécialité NSI suivie au lycée mais cette 
+                            première année m'a permis de découvrir plusieurs langages de programmation (comme Python, C ou Java), 
+                            de travailler sur des projets concrets en groupe, et de me familiariser avec des outils professionnels 
+                            comme Git, Docker ou Visual Studio Code.
+                        </p>
+                    </section>
+    
+                    <section id="formation">
+                        <h2>Ma formation</h2>
+                        <ul id="lst-formations">
+                            <li>
+                                <h3>BUT Informatique</h3>
+                                <div class="info-forma">
+                                    <p class="date">Septembre 2024</p>
+                                    <p class="lieu">IUT de Lannion</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Bac Générale</h3>
+                                <div class="info-forma">
+                                    <p class="date">Septembre 2021 - Juin 2024</p>
+                                    <p class="lieu">Lycée La Fontaine des Eaux, Dinan</p>
+                                    <p class="spe">Spécialité NSI / Mathématique</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                
+                <section id="mon-cv">
+                    <h2>Mon CV</h2>
+                    <img id="cv" src="images/index/cv.webp" alt="mon CV" width="400" height="600">
+                    <a href="images/index/cv.pdf" download class="btn-download">Télécharger le CV</a>
                 </section>
-                <img src="images/index/cv.webp" alt="mon CV" width="400" height="600">
             </div>
 
             <section id="competence">

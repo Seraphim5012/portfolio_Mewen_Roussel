@@ -1,89 +1,116 @@
 @font-face {
-  font-family: 'TankFont';
-  src: url('../fonts/army_rust/ARMYRUST.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'army-title';
+    src: url('../fonts/army_rust/ARMYRUST.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'link';
-  src: url('../fonts/coalition/Coalition_v2..ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'army-link';
+    src: url('../fonts/coalition/Coalition_v2..ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'txt';
-  src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+    font-family: 'army-txt';
+    src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 
-/*:root {
-  --black-armor : #1A1A1A;
-  --green-army : #3A4D3F;
-  --grey-steel : #5C5C5C;
-  --dark-khaki : #4B5320;
-  --red-rust : #8B2E2E;
-  --matte-sand : #A59F91;
-  --cream: #fdfdf8;
-  --smoked-metal : #2F2F2F;
-}*/
+@font-face {
+    font-family: 'space-txt';
+    src: url('../fonts/exo2/Exo2-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space-title';
+    src: url('../fonts/space_age/space_age.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space-link';
+    src: url('../fonts/neuropolx/Neuropol_X_Rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 :root {
-/* army */
-  --chrcoal-black: #0F0F0F;
-  --battle-olive: #4A5C32;
-  --ammo-brass: #D4AF37;
-  --tank-grey: #7A7F7D;
-  --infrared: #A31621;
-  --concrete-smoke: #2E2E2E;
-  --radar-green: #A3C653;
-/* space */
-  --stellar-black: #0B0C10;
-  --nebula-purple: #6C3D9E;
-  --ion-blue: #00BFFF;
-  --plasma-white: #DCE1E3;
-  --meteor-ash: #2A2C34;
-  --comet-red: #E94560;
-  --lunar-grey: #5B5E6D;
+    /* army */
+    --chrcoal-black: #0F0F0F;
+    --battle-olive: #4A5C32;
+    --ammo-brass: #D4AF37;
+    --tank-grey: #7A7F7D;
+    --infrared: #A31621;
+    --concrete-smoke: #2E2E2E;
+    --radar-green: #A3C653;
+    /* space */
+    --stellar-black: #0B0C10;
+    --nebula-purple: #6C3D9E;
+    --ion-blue: #00BFFF;
+    --plasma-white: #DCE1E3;
+    --meteor-ash: #2A2C34;
+    --comet-red: #E94560;
+    --lunar-grey: #5B5E6D;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: var(--stellar-black);
-  line-height: 1.6;
+    background-color: var(--stellar-black);
+    line-height: 1.6;
 }
 
 
 h1, h2, h3 {
-  font-family: 'TankFont', sans-serif;
-  letter-spacing: 3px;
-  color: var(--plasma-white);
+    font-family: 'space-title', sans-serif;
+    letter-spacing: 1px;
+    color: var(--plasma-white);
 }
 
+h1{
+    font-size: 1.7rem;
+}
+
+h2{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+h3{font-size: 1.2rem;}
+
 p{
-  font-family: 'txt', sans-serif;
-  color: var(--plasma-white);
+    font-family: 'space-txt', sans-serif;
+    color: var(--plasma-white);
+}
+
+a{
+    font-family: 'space-link', sans-serif;
+    color: var(--plasma-white);
+    text-decoration: none;
 }
 
 header{
-  background-color: var(--nebula-purple);
-  color: var(--plasma-white);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+    background-color: var(--nebula-purple);
+    color: var(--plasma-white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header>img{
-  border-radius: 40px;
+    border-radius: 40px;
 }
 
 header ul{
@@ -94,39 +121,120 @@ header ul{
 }
 
 header li a{
-  font-family: 'link', sans-serif;
-  letter-spacing: 1px;
-  color: var(--plasma-white);
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  transition: background 0.3s ease;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
 }
 
 header li a:hover{
-  background-color: var(--ion-blue);
-  border-radius: 5px;
+    background-color: var(--ion-blue);
+    border-radius: 5px;
 }
 
 main{
-  padding: 2rem;
-
+    padding: 5rem;    
 }
 
 #presentation{
-  width: 50rem;
+    width: 40rem;
+    margin-bottom: 1rem;
 }
 
 #presentation p{
-  background-color: var(--meteor-ash);
-  border: solid 2px var(--nebula-purple);
-  border-radius: 20px;
-  padding: 1rem;
+    background-color: var(--meteor-ash);
+    border: solid 2px var(--nebula-purple);
+    border-radius: 20px;
+    padding: 1rem;
+    margin-left: 1rem;
 }
 
-#formation-cv{
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: space-between;
-  padding: 1rem 2rem;
+#pres-forma{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+#lst-formations{
+    list-style: none;
+    background-color: var(--meteor-ash);
+    border: solid 2px var(--nebula-purple);
+    border-radius: 20px;
+    padding: 0 1rem 1rem 1rem;
+    margin-left: 1rem;
+    width: 40rem;
+}
+
+#lst-formations li h3{
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#lst-formations li .info-forma{
+    width:20rem;
+    margin-left: 20%;
+    background: linear-gradient(90deg,rgba(0, 191, 255, 1) 0%, rgba(108, 61, 158, 1) 20%, rgba(108, 61, 158, 1) 100%);
+    background-size: 40rem 100%;
+    background-position: -20rem 0;
+
+    padding:5px;
+    border: solid 2px var(--nebula-purple);
+    border-radius: 5px;
+}
+
+@keyframes entreGradient {
+    to{
+        background-position: 0rem 0;
+        border: solid 2px var(--ion-blue);
+    }
+}
+
+@keyframes sortiGradient {
+    to{
+        background-position: -20rem 0;
+        border: solid 2px var(--nebula-purple);
+    }
+}
+
+#lst-formations li .info-forma:hover{
+    transform: scale(1.05);
+    transition: ease-in 0.2s;
+    animation: entreGradient 0.2s ease-in forwards;
+}
+
+#lst-formations li .info-forma:not(:hover){
+    transform: scale(1);
+    transition: ease-out 0.2s;
+    animation: sortiGradient 0.5s ease-in forwards;
+}
+
+.haut-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: nowrap;
+}
+
+#mon-cv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    margin-right: 1rem;
+}
+
+#mon-cv a{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    height: 3.2rem;
+    background-color: var(--nebula-purple);
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+#competence{
+    
 }
