@@ -325,3 +325,47 @@ main{
 }
 .prev { left: 10px; }
 .next { right: 10px; }
+
+
+.footer {
+    background-color: var(--meteor-ash);
+    color: var(--plasma-white);
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+.footer h2 {
+    color: var(--ion-blue);
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.footer ul li {
+    margin: 0.2rem 0 0.2rem 2rem;
+}
+
+.footer a {
+    color: var(--plasma-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--comet-red);
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: var(--lunar-grey);
+    margin-top: 1rem;
+}
+
+.reserve{
+    text-align: center;
+    
+}
