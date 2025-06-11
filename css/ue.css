@@ -74,3 +74,12 @@ p{
     border-radius: 20px;
     padding: 1rem;
 }
+
+.haut-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    margin-bottom: 2rem;
+}
