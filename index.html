@@ -7,16 +7,28 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
+        <header class="entete">
             <img src="images/index/data.webp" alt="photo de profil" width="80px" height="80px">
             <h1>Mewen Roussel</h1>
 
             <nav>
-                <ul>
-                    <li><a href="./index.html">Accueil</a></li>
-                    <li><a href="#formation">Formation</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="menu">
+                    <li class="dir"><a href="./index.html">Accueil</a></li>
+                    <li class="dir"><a href="#formation">Formation</a></li>
+
+                    <li class="dropdown dir">
+                        <a href="#competences">Compétences</a>
+                        <ul class="dropdown-content">
+                            <li><a href="./competence/ue1.html">developpement d'application</a></li>
+                            <li><a href="./competence/ue2.html">Algorithme </a></li>
+                            <li><a href="./competence/ue3.html">Installation</a></li>
+                            <li><a href="./competence/ue4.html">Base de données</a></li>
+                            <li><a href="./competence/ue5.html">Analyse des Besoins</a></li>
+                            <li><a href="./competence/ue6.html">Travailler en équipe</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dir"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -67,24 +79,29 @@
                 <h2>Les Compétences</h2>
                 <div class="competence">
                     <ul class="carousel">
-                        <li>
+                        <li class="ue1">
                             <h3>UE 1 : Développement des applications informatique simple</h3>
                             <img src="images/index/" alt="">
                         </li>
-                        <li>
+                        <li class="ue2">
                             <h3>UE 2 : Appréhender et construire des algorithmes</h3>
+                            <img src="images/index/ue/ue2.webp" alt="image generé base de données">
                         </li>
-                        <li>
+                        <li class="ue3">
                             <h3>UE 3 : Installer et configurer un poste de travail</h3>
+                            <img src="images/index/ue/war_t.png" alt="image generé base de données">
                         </li>
-                        <li>
+                        <li class="ue3">
                             <h3>UE 4 : Mettre en place et concevoir une base de données à partir d'un cahier des charges client</h3>
+                            <img src="images/index/ue/bdd.png" alt="image generé base de données">
                         </li>
-                        <li>
-                            <h3>UE 5 : Identifier les bsoins métiers des clients et des utilisateurs</h3>
+                        <li class="ue5">
+                            <h3>UE 5 : Identifier les besoins métiers des clients et des utilisateurs</h3>
+                            <img src="images/index/ue/ue5.png" alt="image generé base de données">
                         </li>
-                        <li>
+                        <li class="ue6">
                             <h3>UE 6 : Identifier ses aptitudes pour travailler dans une équipe</h3>
+                            <img src="images/index/ue/ue6.png" alt="image generé base de données">
                         </li>
                     </ul>
                     <button class="prev"><</button>
@@ -116,10 +133,10 @@
         function updateCarousel() {
             carousel.style.transform = `translateX(-${index * slideWidth}px)`;
         }
-
+/*
         setInterval(() => {
             index = (index + 1) % slideCount;
             updateCarousel();
-        }, 3000);
+        }, 3000);*/
 </script>
 </html>

@@ -63,6 +63,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 body {
@@ -78,15 +79,15 @@ h1, h2, h3 {
 }
 
 h1{
-    font-size: 1.7rem;
+    font-size: 30px;
 }
 
 h2{
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 26px;
 }
 
-h3{font-size: 1.2rem;}
+h3{font-size: 22px;}
 
 p{
     font-family: 'space-txt', sans-serif;
@@ -103,7 +104,7 @@ ul{
     list-style: none;
 }
 
-header{
+.entete{
     background-color: var(--nebula-purple);
     color: var(--plasma-white);
     padding: 1rem 2rem;
@@ -113,24 +114,60 @@ header{
     flex-wrap: wrap;
 }
 
-header>img{
+.entete>img{
     border-radius: 40px;
 }
 
-header ul{
+.menu{
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
 
-header li a{
+.menu li {
+    position: relative;
+}
+
+.menu li a{
     padding: 0.5rem 1rem;
     transition: background 0.3s ease;
 }
 
-header li a:hover{
+.menu>li>a:hover{
     background-color: var(--ion-blue);
     border-radius: 5px;
+}
+
+/* Menu déroulant caché par défaut */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--meteor-ash);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 200px;
+    width: 21rem;
+}
+
+.dropdown-content li a {
+    display: block;
+    width: auto;
+    font-size: 0.9rem;
+    margin: 5px 0 ;
+    color: var(--plasma-white);
+    transition: background 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+    width: 20rem;
+    padding: 1rem;
+    background-color: var(--ion-blue);
+    color: var(--plasma-white);
+}
+
+/* Affichage au survol */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 main{
@@ -197,7 +234,7 @@ main{
     }
 }
 
-#lst-formations li .info-forma:hover{
+#lst-formations>li .info-forma:hover{
     transform: scale(1.05);
     transition: ease-in 0.2s;
     animation: entreGradient 0.2s ease-in forwards;
@@ -213,8 +250,9 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: start;
+    align-items: stretch;
     flex-wrap: nowrap;
+    margin-bottom: 2rem;
 }
 
 #mon-cv{
@@ -261,9 +299,18 @@ main{
     min-width: 45rem;
     background: var(--meteor-ash);
     text-align: center;
+    padding: 1rem 2rem 2rem 1rem;
     
-    line-height: 200px;
+    /*line-height: 200px;*/
     font-size: 1.2rem;
+}
+
+.carousel li img {
+    margin: 2rem 0 0 0;
+    width: 90%;
+    height: 80%;
+    object-fit: cover; /* la magie est ici */
+    object-position: center;
 }
 
 .prev, .next {
