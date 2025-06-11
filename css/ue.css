@@ -67,3 +67,10 @@ p{
     text-align: justify;
     margin: 1rem 2rem ;
 }
+
+.visuel {
+    background-color: var(--meteor-ash);
+    border: solid 2px var(--nebula-purple);
+    border-radius: 20px;
+    padding: 1rem;
+}
