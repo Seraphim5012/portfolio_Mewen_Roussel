@@ -63,30 +63,63 @@
                 </section>
             </div>
 
-            <section id="competence">
+            <section>
                 <h2>Les Compétences</h2>
-                <ul id="lst-competences">
-                    <li>
-                        <h3>UE 1 : Développement des applications informatique simple</h3>
-                    </li>
-                    <li>
-                        <h3>UE 2 : Appréhender et construire des algorithmes</h3>
-                    </li>
-                    <li>
-                        <h3>UE 3 : Installer et configurer un poste de travail</h3>
-                    </li>
-                    <li>
-                        <h3>UE 4 : Mettre en place et concevoir une base de données à partir d'un cahier des charges client</h3>
-                    </li>
-                    <li>
-                        <h3>UE 5 : Identifier les bsoins métiers des clients et des utilisateurs</h3>
-                    </li>
-                    <li>
-                        <h3>UE 6 : Identifier ses aptitudes pour travailler dans une équipe</h3>
-                    </li>
-                </ul>
+                <div class="competence">
+                    <ul class="carousel">
+                        <li>
+                            <h3>UE 1 : Développement des applications informatique simple</h3>
+                            <img src="images/index/" alt="">
+                        </li>
+                        <li>
+                            <h3>UE 2 : Appréhender et construire des algorithmes</h3>
+                        </li>
+                        <li>
+                            <h3>UE 3 : Installer et configurer un poste de travail</h3>
+                        </li>
+                        <li>
+                            <h3>UE 4 : Mettre en place et concevoir une base de données à partir d'un cahier des charges client</h3>
+                        </li>
+                        <li>
+                            <h3>UE 5 : Identifier les bsoins métiers des clients et des utilisateurs</h3>
+                        </li>
+                        <li>
+                            <h3>UE 6 : Identifier ses aptitudes pour travailler dans une équipe</h3>
+                        </li>
+                    </ul>
+                    <button class="prev"><</button>
+                    <button class="next">></button>
+                </div>
             </section>
 
         </main>
     </body>
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const slides = document.querySelectorAll('.carousel li');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        const slideCount = slides.length;
+        const slideWidth = slides[0].offsetWidth;
+        let index = 0;
+
+        next.addEventListener('click', () => {
+            index = (index + 1) % slideCount; // boucle vers 0
+            updateCarousel();
+        });
+
+        prev.addEventListener('click', () => {
+            index = (index - 1 + slideCount) % slideCount;
+            updateCarousel();
+        });
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+
+        setInterval(() => {
+            index = (index + 1) % slideCount;
+            updateCarousel();
+        }, 3000);
+</script>
 </html>

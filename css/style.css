@@ -99,6 +99,10 @@ a{
     text-decoration: none;
 }
 
+ul{
+    list-style: none;
+}
+
 header{
     background-color: var(--nebula-purple);
     color: var(--plasma-white);
@@ -114,7 +118,6 @@ header>img{
 }
 
 header ul{
-    list-style: none;
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -155,7 +158,6 @@ main{
 }
 
 #lst-formations{
-    list-style: none;
     background-color: var(--meteor-ash);
     border: solid 2px var(--nebula-purple);
     border-radius: 20px;
@@ -235,6 +237,44 @@ main{
     font-size: 13px;
 }
 
-#competence{
-    
+.competence{
+    background-color: var(--meteor-ash);
+    border: solid 2px var(--nebula-purple);
+    border-radius: 20px;
+    margin: auto;
+
+    /*test carrousel*/
+
+    position: relative;
+    width: 45rem;
+    overflow: hidden;
 }
+
+.carousel{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel li{
+    min-width: 45rem;
+    background: var(--meteor-ash);
+    text-align: center;
+    
+    line-height: 200px;
+    font-size: 1.2rem;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
