@@ -39,7 +39,7 @@
             </header>
             <section class="haut-page">
                 <section class="recap">
-                    <img src="../images/ue_img/" alt="">
+                    <img src="../images/ue_img/ue2/ue2.webp" alt="image projet">
                     <h3 class="title">Projet : KNN/KMEAN</h3>
                     <ul class="lang">
                         <h3>Les langages</h3>
@@ -67,9 +67,21 @@
                 </section>
             </section>
             <section class="visuel">
-                <h3 class="title">Visuel</h3>
+            <h3 class="title">Visuel</h3>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <a href="../images/ue_img/ue2/ue2.webp" class="lightbox">
+                        <img src="../images/ue_img/ue2/ue2.webp" alt="Visuel 2">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="../images/ue_img/ue2/diagramme.webp" class="lightbox">
+                        <img src="../images/ue_img/ue2/diagramme.webp" alt="Visuel 1">
+                    </a>
+                </div>
 
-            </section>
+            </div>
+        </section>
         </main>
         <footer class="footer">
             <div class="footer-content">
@@ -79,4 +91,23 @@
             </div>
         </footer>
     </body>
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+    <script>
+        document.querySelectorAll('.lightbox').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const modal = document.getElementById('lightbox-modal');
+                const modalImg = document.getElementById('lightbox-img');
+                modal.style.display = "block";
+                modalImg.src = this.href;
+            });
+        });
+
+        document.querySelector('.lightbox-close').addEventListener('click', function() {
+            document.getElementById('lightbox-modal').style.display = "none";
+        });
+    </script>
 </html>
