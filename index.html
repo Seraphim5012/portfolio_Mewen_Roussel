@@ -5,10 +5,11 @@
         <meta lang="fr">
         <meta name="description" content="page d'acceuil du portfolio">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" type="image/png" href="./images/logo.png">
     </head>
     <body>
         <header class="entete">
-            <img src="images/index/data.webp" alt="photo de profil" width="80px" height="80px">
+            <a href="./index.html"><img src="images/index/data.webp" alt="photo de profil" width="80px" height="80px"></a>
             <h1>Mewen Roussel</h1>
 
             <nav>
@@ -52,16 +53,20 @@
                             <li>
                                 <h3>BUT Informatique</h3>
                                 <div class="info-forma">
+                                    <a href="https://iut-lannion.univ-rennes.fr">
                                     <p class="date">Septembre 2024</p>
                                     <p class="lieu">IUT de Lannion</p>
+                                    </a>
                                 </div>
                             </li>
                             <li>
                                 <h3>Bac Générale</h3>
                                 <div class="info-forma">
+                                    <a href="https://www.lycees-dinan.fr">
                                     <p class="date">Septembre 2021 - Juin 2024</p>
                                     <p class="lieu">Lycée La Fontaine des Eaux, Dinan</p>
                                     <p class="spe">Spécialité NSI / Mathématique</p>
+                                    </a>
                                 </div>
                             </li>
                         </ul>
@@ -80,28 +85,28 @@
                 <div class="competence">
                     <ul class="carousel">
                         <li class="ue1">
-                            <h3>UE 1 : Développement des applications informatique simple</h3>
-                            <img src="images/index/ue/snake.png" alt="">
+                            <a href="./competence/ue1.html"><h3>UE 1 : Développement des applications informatique simple</h3></a>
+                            <img src="images/index/ue/snake.png" alt="image ue1">
                         </li>
                         <li class="ue2">
-                            <h3>UE 2 : Appréhender et construire des algorithmes</h3>
-                            <img src="images/index/ue/ue2.webp" alt="image generé base de données">
+                            <a href="./competence/ue1.html"><h3>UE 2 : Appréhender et construire des algorithmes</h3></a>
+                            <img src="images/index/ue/ue2.webp" alt="image ue2">
                         </li>
                         <li class="ue3">
-                            <h3>UE 3 : Installer et configurer un poste de travail</h3>
-                            <img src="images/index/ue/war_t.png" alt="image generé base de données">
+                            <a href="./competence/ue1.html"><h3>UE 3 : Installer et configurer un poste de travail</h3></a>
+                            <img src="images/index/ue/war_t.png" alt="image ue3">
                         </li>
                         <li class="ue3">
-                            <h3>UE 4 : Mettre en place et concevoir une base de données à partir d'un cahier des charges client</h3>
-                            <img src="images/index/ue/bdd.png" alt="image generé base de données">
+                            <a href="./competence/ue1.html"><h3>UE 4 : Mettre en place et concevoir une base de données à partir d'un cahier des charges client</h3></a>
+                            <img src="images/index/ue/bdd.png" alt="image ue4">
                         </li>
                         <li class="ue5">
-                            <h3>UE 5 : Identifier les besoins métiers des clients et des utilisateurs</h3>
-                            <img src="images/index/ue/ue5.png" alt="image generé base de données">
+                            <a href="./competence/ue1.html"><h3>UE 5 : Identifier les besoins métiers des clients et des utilisateurs</h3></a>
+                            <img src="images/index/ue/ue5.png" alt="image ue5">
                         </li>
                         <li class="ue6">
-                            <h3>UE 6 : Identifier ses aptitudes pour travailler dans une équipe</h3>
-                            <img src="images/index/ue/ue6.png" alt="image generé base de données">
+                            <a href="./competence/ue1.html"><h3>UE 6 : Identifier ses aptitudes pour travailler dans une équipe</h3></a>
+                            <img src="images/index/ue/ue6.png" alt="image ue6">
                         </li>
                     </ul>
                     <button class="prev"><</button>
@@ -147,10 +152,10 @@
         function updateCarousel() {
             carousel.style.transform = `translateX(-${index * slideWidth}px)`;
         }
-/*
+
         setInterval(() => {
             index = (index + 1) % slideCount;
             updateCarousel();
-        }, 3000);*/
+        }, 3000);
 </script>
 </html>
